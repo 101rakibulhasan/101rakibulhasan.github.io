@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+    cursor: url('images/cursor.png') 35 35,auto;
+    /*cursor: crosshair;*/
+}
+
+body{
+    font-family: 'Alata';
+    background-color: #1F1F1F;
+    color:white;   
+}
+
+p{
+    margin:0px;
+    padding:0px;
+    font-weight: normal;
+}
+
+a{
+    text-decoration: none;
+}
+
+.introduction{
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    width: fit-content;
+    display: none;
+}
+
+.introduction_extra{
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+.about{
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    width: fit-content;
+    display: none;
+}
+
+.pages{
+    position: absolute;
+    bottom: 60px;
+    left: 100px;
+    width: fit-content;
+}
+
+.pages a{
+    margin-right:70px;
+    font-size: 18px;
+    color:#CFCFCF;
+}
+
+.pages ul{
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+    margin-top: 10px;
+}
+
+.skills{
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    display: none;
+}
+
+.skills ul{
+    width: 250px;
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+.skills li{
+    margin-bottom: 20px;
+}
+
+.skills img{
+    width:25px;
+    height: 25px;
+    margin:10px;
+}
+
+.left_skills{
+    height: 420px;
+    overflow-y: scroll;
+    margin-top: 10px;
+    float: left;
+}
+
+.right_skills{
+    height: 420px;
+    overflow-y: scroll;
+    margin-top: 10px;
+    float: right;
+    margin-left:50px;
+}
+
+.progress{
+    height: 10px;
+}
+
+.projects{
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    display: none;
+    width:780px;
+}
+
+.thumbnail{
+    width: 250px;
+    height: 250px;
+    background-color: blue;
+    box-shadow: 0px 5px 10px rgb(37, 37, 37);
+    overflow: visible;
+}
+
+.projects ul{
+    list-style-type: none;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.projects li{
+    margin-left: 40px;
+}
+
+.thumbnail p{
+    position: relative; 
+    bottom: -180px;
+    margin-left: -20px;
+    font-size: 15px;
+    background-color: #3f3f3f;
+    padding:5px;
+    width:200px;
+    text-align: center;
+    border: #7a7a7a;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.creations{
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    /*display: none;*/
+    width:780px;
+}
+
+.creations ul{
+    list-style-type: none;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.creations li{
+    margin-left: 40px;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    /*background: transparent;   Optional: just make scrollbar invisible */
+}
