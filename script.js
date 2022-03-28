@@ -11,6 +11,9 @@ function zero_link() {
     document.getElementById("div_reviews").style.display = "none";
 
     document.getElementById("title").textContent = document.getElementById("introduction").textContent;
+
+    document.getElementById("div_portrait").style.display = "block";
+
 }
 
 function first_link() {
@@ -24,6 +27,7 @@ function first_link() {
 
     document.getElementById("title").textContent = document.getElementById("about").textContent;
 
+    document.getElementById("div_portrait").style.display = "block";
 }
 
 function second_link() {
@@ -37,6 +41,7 @@ function second_link() {
 
     document.getElementById("title").textContent = document.getElementById("skills").textContent;
 
+    document.getElementById("div_portrait").style.display = "none";
 }
 
 function third_link() {
@@ -50,6 +55,7 @@ function third_link() {
 
     document.getElementById("title").textContent = document.getElementById("projects").textContent;
 
+    document.getElementById("div_portrait").style.display = "none";
 }
 
 function forth_link() {
@@ -63,6 +69,7 @@ function forth_link() {
 
     document.getElementById("title").textContent = document.getElementById("creations").textContent;
 
+    document.getElementById("div_portrait").style.display = "none";
 }
 
 function fifth_link() {
@@ -76,6 +83,7 @@ function fifth_link() {
 
     document.getElementById("title").textContent = document.getElementById("reviews").textContent;
 
+    document.getElementById("div_portrait").style.display = "none";
 }
 
 document.addEventListener("mousemove", parallax);
