@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Offside&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
 
 *{
     margin:0px;
@@ -32,16 +35,16 @@
   }
 
 body{
-    font-family: 'Alata';
-    background-color: #111111;
+    font-family: 'Bungee Hairline', cursive;
+    background-image: url("images/background_new.png");
     color:white;   
-    overflow: hidden;
+    /*overflow: hidden;*/
 
     scrollbar-width: thin;
     scrollbar-color: #6969dd #e0e0e0;
     scrollbar-width: thin;
 
-    user-select: none;
+    /*user-select: none;*/
 }
 
 p{
@@ -56,20 +59,30 @@ a{
 
 .introduction{
     position: absolute;
-    top:16%;
-    left: 8%;
+    top: 14%;
+    left: 9%;
     width: 50vw;
+    height : 50vh;
+    /*background-color: rgb(68, 0, 255);*/
 
     /*-webkit-animation: fadeIn 2s steps(40, end);
     animation: fadeIn 2s steps(40, end);*/
 }
 
 .introduction_extra{
-    margin-left: 150px;
+    margin-left: 12%;margin-right: 10%;
     margin-top: 60px;
 }
 
 .about{
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    width: calc(100vw - 780px);
+    display: none;
+}
+
+.status{
     position: absolute;
     top: 7%;
     left: 7%;
@@ -89,12 +102,12 @@ a{
 
 .pages ul{
     list-style-type: none;
-    margin-top: 10px;
 }
 
 .pages ul li{
     float: left;
-    margin-right:70px;
+    margin-right:60px;
+    margin-top:10px;
     text-align: center;
 }
 
@@ -102,7 +115,7 @@ a{
     white-space: nowrap;
     overflow: hidden;
     border-right: .15em solid rgb(8, 197, 255);
-    width: 7.3em;
+    width: 8.8em;
     -webkit-animation: typewritter 2.5s steps(40, end);
     animation: fadeIn typewritter 2.5s steps(40, end);
     -webkit-animation-fill-mode: forwards;
@@ -111,6 +124,8 @@ a{
 
 .pages ul li a{
     font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    /*font-style: oblique;*/
     color:#d1d1d1;
 }
 
@@ -136,6 +151,28 @@ a{
     height: 25px;
     margin:10px;
 }
+.skill_title{
+    position:fixed;
+    
+    transform: rotate(-90deg);
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.software_title{
+    top: 45%;
+    left: 10px;
+}
+
+.prolang_title{
+    top: 45%;
+    left: 325px;
+}
+
+.pertrait_title{
+    top: 45%;
+    left: 720px;
+}
 
 .left_skills{
     height: calc(110vh - 400px);
@@ -144,6 +181,7 @@ a{
     float: left;
     padding-right: 30px;
 }
+
 
 .right_skills{
     height: calc(110vh - 400px);
@@ -239,6 +277,8 @@ a{
     opacity: 0.7;
 
     border-radius: 5px;
+
+    font-weight: bold;
 }
 
 .projects li:hover{
@@ -300,6 +340,7 @@ a{
     opacity: 0.7;
 
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .creations li:hover{
@@ -310,27 +351,13 @@ a{
     position: absolute;
     top: 10%;
     left: 30%;
-    width: 100%;
     justify-content: center;
     align-items: center;
     display: none;
 }
 
 .reviews img{
-    width: 20%;
-}
-
-.bg_arts{
-    z-index: 1;
-    opacity: 0.1;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-}
-
-.bg_arts img{
-    min-width: 100%;
-    min-height: 100%;
+    width: 60%;
 }
 
 .social_link{
@@ -363,9 +390,16 @@ a{
 
 .portrait{
     position: absolute;
-    bottom: 3%;
-    right: 160px;
+    top : 40px;
+    right: 20px;
+    bottom : 40px;
+    margin: 0 auto;
     opacity: 1;
+    width : 400px;
+}
+
+.portrait img{
+    height:  100%;
 }
 
 .under_const{

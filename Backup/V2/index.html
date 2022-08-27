@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakibul Hasan</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+</head>
+<body>
+    <script src="script.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyANTsnb9lIouo-a1STcHSUtj3ErYvckoRo",
+          authDomain: "rakibul-portfolio.firebaseapp.com",
+          projectId: "rakibul-portfolio",
+          storageBucket: "rakibul-portfolio.appspot.com",
+          messagingSenderId: "23827723374",
+          appId: "1:23827723374:web:373d9c61832fa91deea27f",
+          measurementId: "G-WLVTQCCVLJ"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+      
+    <!-- BACKGROUND --> 
+    <div class="bg_arts">
+        <img src="images/background_new.png"/>
+    </div> 
+
+    <!-- INTRODUCTION -->
+    <div id="div_introduction" class="div introduction" value="-5">
+        <p style="font-size:15px;">Hi, My name is</p>
+        <p style="font-size:60px;margin-bottom:1px;font-weight: bold;">Rakibul Hasan</p>
+        <p style="font-size:15px;opacity:0.7;">I build things for a better future of humanity</p>
+        <p style="font-size:30px;margin-top:20px;font-family: 'Lato', sans-serif;">I'm a software engineer capable of developing and enhancing digital technological stuff. Currently I'm working on different project of mine which is free for everybody.</p>
+
+        <p class="introduction_extra" style="font-size:15px;">View <a href="#" style="color:#07E2F0;font-weight: bold;" onclick="third_link()">My Projects</a> , Read <a href="#" style="color:#F86363;font-weight: bold;" onclick="first_link()">About Me</a> or See My <a href="#" style="color:#f2cf09;font-weight: bold;" onclick="second_link()">Status</a></p>
+        <p style="font-size:15px;margin-top: 35px;margin-left: 88px;font-family: 'Lato', sans-serif;">Web Designer  |  Graphics Designer  |  Programmer | Software Developer</p>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="div_about" class="div about" value="-5">
+        <p style="font-size:50px;font-weight: bold;">Rakibul Hasan</p>
+        <p style="margin-left: 30px; font-size:20px;margin-top: 20px;font-family: 'Lato', sans-serif;">I’m a multidisciplinary designer who focuses on telling my clients’ stories visually, through enjoyable and meaningful experiences. I specialize in responsive websites and functional user interfaces.</p>
+
+        <p style="margin-left: 30px;font-size:20px;margin-top: 10px;font-family: 'Lato', sans-serif;">I'm currently a student in <b style="color: rgb(0, 255, 128);">Bangladesh University Of Business And Technology</b> in Department Of <b style="color: rgb(80, 170, 255);">Computer Science Engineering</b>. I am learning new everyday and sharping my skills for betterment of future.</p>
+        <p style="margin-left: 30px;font-size:15px;margin-top: 40px;">Head over to my <a href="https://www.linkedin.com/in/rakibul-hasan-473a901a5/" style="color: rgb(118, 189, 255);font-weight: bold;"><u>LinkedIn</u></a> profile for more of my work</p>
+        <p style="margin-left: 30px;font-size:15px;margin-top: 10px;">Contact me on my <a href="mailto:101rakibulhasan@gmail.com" style="color: rgb(255, 113, 18);font-weight: bold;"><u>E-mail</u></a> for opportunities and talk over!</p>
+        <p style="margin-left: 30px;font-size:15px;margin-top: 10px;">Check out my coding status at <a href="https://www.stopstalk.com/user/profile/_M0R14R7Y_" style="color: rgb(200, 255, 18);font-weight: bold;"><u>StopStalk</u></a> because I do problem solving almost everyday !</p>
+    </div>
+
+    <!-- STATUS -->
+    <div id="div_status" class="status" value="-5">
+        <p>lmao</p>
+    </div>
+
+    <!-- SKILLS -->
+    <div id="div_skills" class="skills"  value="-5">
+        <p style="font-size:40px;">My Skillsets</p>
+        <p class="skill_title software_title">------- S O F T W A R E S -------</p>
+        <div class="left_skills">
+            <ul>
+                <li>
+                    <div class="vscode">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/vscode_icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">Visual Studio Code</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="photoshop">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/photoshop_icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">Adobe Photoshop CC 2018</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="blender">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/blender_icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">Blender</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 30%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="unity">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/unity3d_icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">Unity 3D</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="figma">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/figma_icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">Figma</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 30%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="illustartor">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/illustrator_icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">Adobe Illustrator 2018</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 15%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="premier">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/premier_icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">Adobe Premier CC 2019</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="aftereffects">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/after_effects_icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">Adobe After Effects 2022</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="powerpoint">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/powerpoint_icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">Microsoft PowerPoint 2016</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 60%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <p class="skill_title prolang_title">------- C O M P U T E R U S E D L A N G U A G E S -------</p>
+        <div class="right_skills">
+            <ul>
+                <li>
+                    <div class="html_css">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/html_css_icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">HTML + CSS</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="c_c++">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/c_c++_icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">C / C++</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="python">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/python_icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">Python</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="javascript">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/javascript-icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">JavaScript</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 30%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="java">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/java_icn.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">Java</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="c_sharp">
+                        <div style="display:flex; align-items:flex-start;">
+                            <img src="images/c_sharp_icon.png"/>
+                            <p style="margin-top:10px;margin-left: 5px;font-size: 15px;">C#</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <p class="skill_title pertrait_title">------- P E R S O N A L I T Y T R A I T -------</p>
+        <div class="traits">
+            <ul>
+                <li>
+                    <div class="problem_solving">
+                        <p>Problem Solving</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="leadership">
+                        <p>Leadership</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="confidence">
+                        <p>Confidence</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="hard_working">
+                        <p>Hard Working</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="ambition">
+                        <p>Ambition</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 30%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="vocabulary">
+                        <p>Vocabulary</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="typingspeed">
+                        <p>Typing Speed</p>
+                        <a href="">--- WPM (See Certificate)</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="info">
+            <p>I always learn new thing everyday and sharpen my skills so I don't get dull.</p>
+            <br>
+            <p>The Lists Are In Descending Order (Expert To Novice) </p>
+            <br>
+            <p>They get updated every 3 months.</p>
+        </div>
+    </div>
+        
+    <!-- PROJECTS -->
+    <div id="div_projects" class="projects"  value="-5">
+        <p style="font-size:40px;margin:0px;">My Recent Projects</p>
+        <ul>
+            <li>
+                <a href="https://omnistorenexina.wordpress.com/">
+                    <div class="thumbnail">
+                        <img src="images/omni_img.png"/>
+                        <p style="color: rgb(255, 4, 4); background-color: #eeeeee; border: 1px solid #ff0000;">Project OMNI</p>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://projectsigma.code.blog">
+                    <div class="thumbnail">
+                        <img src="images/sigma_img.png"/>
+                        <p style="color: rgb(255, 235, 53); background-color: #3f3f3f; border: 1px solid rgb(255, 241, 120);">Project SIGMA</p>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://rakibulhasan101.github.io/project-nightingale/">
+                    <div class="thumbnail">
+                        <img src="images/nightingle_img.png"/>
+                        <p style="color: rgb(228, 228, 228); background-color: #2e4416; border: 1px solid rgb(243, 243, 243);">Project NIGHTINGLE</p>
+                    </div>
+                </a>
+            </li>
+
+            <li style="margin-right: 40px;">
+                <a href="">
+                    <div class="thumbnail">
+                        <img src="images/view_more_img.png"/>
+                        <p style="color: rgb(255, 255, 255);background-color: #694242; border: 1px solid rgb(255, 43, 43);">View More</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <p>These are the projects i have been working on for the last few years. Most of them are still under work because of time.</p>
+        <p>Each was created based on a specific goal in mind.</p>
+    </div>
+
+    <!-- CREATIONS -->
+    <div id="div_creations" class="creations"  value="-5">
+        <p style="font-size:40px;margin:0px;">My Recent Creations</p>
+        <ul>
+            <li>
+                <a href="">
+                    <div class="thumbnail">
+                        <img src="images/none.png"/>
+                        <p style="color: white;">None</p>
+                    </div>
+                </a>
+            </li>
+            <!--
+            <li>
+                <a href="">
+                    <div class="thumbnail">
+                        <img src=""/>
+                        <p style="color: white;">My RECENT Creations</p>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <div class="thumbnail">
+                        <img src=""/>
+                        <p style="color: white;">My RECENT Creations</p>
+                    </div>
+                </a>
+            </li>
+
+            <li style="margin-right: 40px;">
+                <a href="">
+                    <div class="thumbnail">
+                        <img src=""/>
+                        <p style="color: white;">View More</p>
+                    </div>
+                </a>
+            </li> 
+            -->
+        </ul>
+        <p>There is currently nothing i have created right now but maybe come back in future to see some of my cretions.</p>
+    </div>
+
+    <!-- REVIEWS -->
+    <div id="div_reviews" class="div reviews"  value="-5">
+        <img style="margin-bottom:60px;" src="images/under_construction.png"/>
+        <p>This Page Is Still Under Construction :)</p>
+    </div>
+
+    <!-- PAGES -->
+    <div id="div_pages" class="pages">
+        <p id="title" style="font-size:30px;margin:0px;font-weight: bold;">Introduction</p>
+        <ul>
+            <li><a id="introduction" onclick="zero_link()" href="#">Introduction</a></li>
+            <li><a id="about" onclick="first_link()" href="#">About</a></li>
+            <li><a id="status" onclick="second_link()" href="#">Status</a></li>
+            <li><a id="skills" onclick="third_link()" href="#">Skills</a></li>
+            <li><a id="projects" onclick="forth_link()" href="#">Projects</a></li>
+            <li><a id="creations" onclick="fifth_link()" href="#">Creations</a></li>
+            <li><a id="reviews" onclick="sixth_link()" href="#">Reviews</a></li>
+        </ul>
+    </div>
+
+    <!-- PORTRAIT -->
+    <div id="div_portrait" class="portrait" >
+        <img src="images/me.png"/>
+    </div>
+
+    <!-- SOCIAL LINK -->
+    <div class="social_link">
+        <ul>
+            <li><a href="https://github.com/rakibulhasan101?tab=repositories" target="_blank" class="fa fa-github" style="color: white;"></a>  </li>
+            <li><a href="https://twitter.com/101rakibulhasan" class="fa fa-twitter" target="_blank" style="color: white;"></a>  </li>
+            <li><a href="https://www.youtube.com/channel/UClNQeFRuPVEEBb9OjnTERaQ" target="_blank" class="fa fa-youtube" style="color: white;"></a>  </li>
+            <li><a href="https://www.facebook.com/profile.php?id=100026162389974" target="_blank" class="fa fa-facebook" style="color: white;"></a></li>
+            <li><a href="https://www.linkedin.com/in/rakibul-hasan-473a901a5/" target="_blank" class="fa fa-linkedin" style="color: white;"></a>  </li>
+            <li><a href="https://www.instagram.com/_rakibul.hasan_/" target="_blank" class="fa fa-instagram" style="color: white;"></a>  </li>
+            <li><a href="https://www.pinterest.com/101rakibulhasan/" target="_blank" class="fa fa-pinterest"  style="color: white;"></a>  </li>
+        </ul>
+    </div>
+
+    <!-- UNDER CONSTRUCTION -->
+    <div class="under_const">
+        <p>This website is still under construction.</p>
+    </div>
+</body>
+</html>

@@ -1,10 +1,11 @@
 //document.getElementById("about").addEventListener("click", about);
-document.addEventListener('contextmenu', event => event.preventDefault());
+//document.addEventListener('contextmenu', event => event.preventDefault());
 
 function zero_link() {
     document.getElementById("div_introduction").style.display = "block";
 
     document.getElementById("div_about").style.display = "none";
+    document.getElementById("div_status").style.display = "none";
     document.getElementById("div_skills").style.display = "none";
     document.getElementById("div_projects").style.display = "none";
     document.getElementById("div_creations").style.display = "none";
@@ -20,6 +21,7 @@ function first_link() {
     document.getElementById("div_introduction").style.display = "none";
 
     document.getElementById("div_about").style.display = "block";
+    document.getElementById("div_status").style.display = "none";
     document.getElementById("div_skills").style.display = "none";
     document.getElementById("div_projects").style.display = "none";
     document.getElementById("div_creations").style.display = "none";
@@ -34,6 +36,23 @@ function second_link() {
     document.getElementById("div_introduction").style.display = "none";
 
     document.getElementById("div_about").style.display = "none";
+    document.getElementById("div_status").style.display = "none";
+    document.getElementById("div_status").style.display = "block";
+    document.getElementById("div_skills").style.display = "none";
+    document.getElementById("div_projects").style.display = "none";
+    document.getElementById("div_creations").style.display = "none";
+    document.getElementById("div_reviews").style.display = "none";
+
+    document.getElementById("title").textContent = document.getElementById("status").textContent;
+
+    document.getElementById("div_portrait").style.display = "none";
+}
+
+function third_link() {
+    document.getElementById("div_introduction").style.display = "none";
+
+    document.getElementById("div_about").style.display = "none";
+    document.getElementById("div_status").style.display = "none";
     document.getElementById("div_skills").style.display = "block";
     document.getElementById("div_projects").style.display = "none";
     document.getElementById("div_creations").style.display = "none";
@@ -44,10 +63,11 @@ function second_link() {
     document.getElementById("div_portrait").style.display = "none";
 }
 
-function third_link() {
+function forth_link() {
     document.getElementById("div_introduction").style.display = "none";
 
     document.getElementById("div_about").style.display = "none";
+    document.getElementById("div_status").style.display = "none";
     document.getElementById("div_skills").style.display = "none";
     document.getElementById("div_projects").style.display = "block";
     document.getElementById("div_creations").style.display = "none";
@@ -58,10 +78,11 @@ function third_link() {
     document.getElementById("div_portrait").style.display = "none";
 }
 
-function forth_link() {
+function fifth_link() {
     document.getElementById("div_introduction").style.display = "none";
 
     document.getElementById("div_about").style.display = "none";
+    document.getElementById("div_status").style.display = "none";
     document.getElementById("div_skills").style.display = "none";
     document.getElementById("div_projects").style.display = "none";
     document.getElementById("div_creations").style.display = "block";
@@ -72,10 +93,11 @@ function forth_link() {
     document.getElementById("div_portrait").style.display = "none";
 }
 
-function fifth_link() {
+function sixth_link() {
     document.getElementById("div_introduction").style.display = "none";
 
     document.getElementById("div_about").style.display = "none";
+    document.getElementById("div_status").style.display = "none";
     document.getElementById("div_skills").style.display = "none";
     document.getElementById("div_projects").style.display = "none";
     document.getElementById("div_creations").style.display = "none";
