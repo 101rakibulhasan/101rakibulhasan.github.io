@@ -23,23 +23,32 @@
       
     <!-- INTRODUCTION -->
     <div id="div_introduction" class="div introduction" value="-5">
-        <p class="introduction_hi">HI, MY NAME IS</p>
-        <h1 class="introduction_name">Rakibul Hasan</h1>
-        <p class="introduction_shorts">I BUILD THINGS FOR A BETTER FUTURE FOR HUMANITY</p>
-        <p class="introduction_summary">I'm a software engineer capable of developing and enhancing digital technological software. Currently I'm always working on different personal project and sharpening my skills everyday.</p>
+        <div class="introduction_text">
+            <p class="introduction_hi">HI, MY NAME IS</p>
+            <h1 class="introduction_name">Rakibul Hasan</h1>
+            <p class="introduction_shorts">I BUILD THINGS FOR A BETTER FUTURE FOR HUMANITY</p>
+            <p class="introduction_summary">I'm a software engineer capable of developing and enhancing digital technological software. Currently I'm always working on different personal project and sharpening my skills everyday.</p>        
+        </div>
 
-        <p class="introduction_extra">Read More <a href="#" style="color:#07E2F0;font-weight: bold;" onclick="first_link()">About Me</a>, View <a href="#" style="color:#F86363;font-weight: bold;" onclick="third_link()">My Projects</a> or See My <a href="#" style="color:#f2cf09;font-weight: bold;" onclick="second_link()">Status</a></p>
-        <p class="introduction_perks">WEB DESIGNER  /  GAME DEVELOPER  /  COMPETITIVE PROGRAMMER / SOFTWARE DEVELOPER</p>
+        <div class="introduction_shortcut">
+            <p class="introduction_extra">Read More <a href="#" style="color:#07E2F0;font-weight: bold;" onclick="first_link()">About Me</a>, View <a href="#" style="color:#F86363;font-weight: bold;" onclick="third_link()">My Projects</a> or See My <a href="#" style="color:#f2cf09;font-weight: bold;" onclick="second_link()">Status</a></p>
+            <p class="introduction_perks">WEB DESIGNER  /  GAME DEVELOPER  /  COMPETITIVE PROGRAMMER / SOFTWARE DEVELOPER</p>          
+        </div>
     </div>
 
     <!-- ABOUT -->
     <div id="div_about" class="div about" value="-5">
         <h1 class="about_name">Rakibul Hasan</h1>
-        <p class="about_summaryA">I’m a multidisciplinary designer who focuses on telling my clients’ stories visually, through enjoyable and meaningful experiences. I specialize in responsive websites and functional user interfaces.</p>
-        <p class="about_summaryB">I'm currently a student in <b style="color: rgb(0, 255, 128);">Bangladesh University Of Business And Technology</b> in Department Of <b style="color: rgb(80, 170, 255);">Computer Science Engineering</b>. I am learning something new everyday and sharping my skills for betterment of future.</p>
-        <p class="about_extra" style="margin-top: 40px;">Head over to my <a href="https://www.linkedin.com/in/rakibul-hasan-473a901a5/" style="color: rgb(118, 189, 255);font-weight: bold;" target=”_blank”><u>LinkedIn</u></a> profile for more of my work</p>
-        <p class="about_extra" style="margin-top: 10px;">Contact me on my <a href="mailto:101rakibulhasan@gmail.com" style="color: rgb(255, 113, 18);font-weight: bold;" target=”_blank”><u>E-mail</u></a> for opportunities and talk over!</p>
-        <p class="about_extra" style="margin-top: 10px;">Check out my coding status at <a href="https://www.stopstalk.com/user/profile/_M0R14R7Y_" style="color: rgb(200, 255, 18);font-weight: bold;" target=”_blank”><u>StopStalk</u></a> because I do problem solving almost everyday !</p>
+        <div class="about_text">
+            <p class="about_summaryA">" I’m a multidisciplinary designer who focuses on telling my clients’ stories visually, through enjoyable and meaningful experiences. I specialize in responsive websites and functional user interfaces. "</p>
+            <p class="about_summaryB">I'm currently a student in <b style="color: rgb(0, 255, 128);">Bangladesh University Of Business And Technology</b> in Department Of <b style="color: rgb(80, 170, 255);">Computer Science Engineering</b>. I am learning something new everyday and sharping my skills for betterment of future.</p>
+        </div>
+
+        <div class="about_shortcut">
+            <p class="about_extra_linkedin">Head over to my <a href="https://www.linkedin.com/in/rakibul-hasan-473a901a5/" style="color: rgb(118, 189, 255);font-weight: bold;" target=”_blank”><u>LinkedIn</u></a> profile for more of my work</p>
+            <p class="about_extra_email">Contact me on my <a href="mailto:101rakibulhasan@gmail.com" style="color: rgb(255, 113, 18);font-weight: bold;" target=”_blank”><u>E-mail</u></a> for opportunities and talk over!</p>
+            <p class="about_extra_stopstalk">Check out my coding status at <a href="https://www.stopstalk.com/user/profile/_M0R14R7Y_" style="color: rgb(200, 255, 18);font-weight: bold;" target=”_blank”><u>StopStalk</u></a> because I do problem solving almost everyday !</p>
+        </div>
     </div>
 
     <!-- STATUS -->
@@ -426,18 +435,18 @@
     <div id="div_pages" class="pages">
         <h1 id="title" class="pages_title">INTRODUCTION</h1>
         <ul>
-            <li><a id="introduction" onclick="zero_link()" href="#">INTRODUCTION</a></li>
-            <li><a id="about" onclick="first_link()" href="#">ABOUT</a></li>
-            <li><a id="status" onclick="second_link()" href="#">STATUS</a></li>
-            <li><a id="skills" onclick="third_link()" href="#">SKILLS</a></li>
-            <li><a id="projects" onclick="forth_link()" href="#">PROJECTS</a></li>
-            <li><a id="creations" onclick="fifth_link()" href="#">CREATIONS</a></li>
-            <li><a id="reviews" onclick="sixth_link()" href="#">REVIEWS</a></li>
+            <li onclick="zero_link()"><a id="introduction" href="#">INTRODUCTION</a></li>
+            <li onclick="first_link()"><a id="about" href="#">ABOUT</a></li>
+            <li onclick="second_link()"><a id="status" href="#">STATUS</a></li>
+            <li onclick="third_link()"><a id="skills" href="#">SKILLS</a></li>
+            <li onclick="forth_link()"><a id="projects" href="#">PROJECTS</a></li>
+            <li onclick="fifth_link()"><a id="creations" href="#">CREATIONS</a></li>
+            <li onclick="sixth_link()"><a id="reviews" href="#">REVIEWS</a></li>
         </ul>
     </div>
 
     <div class="pages_button">
-        <button onclick="slide_page()"><img src="images/menu_icn.png"/></button>
+        <img onclick="slide_page()" src="images/menu_icn.png"/>
     </div>
 
     <!-- PORTRAIT -->

@@ -55,6 +55,7 @@ a{
 
     /*-webkit-animation: fadeIn 2s steps(40, end);
     animation: fadeIn 2s steps(40, end);*/
+    display: none;
 }
 
 .introduction_hi{
@@ -105,33 +106,55 @@ a{
     position: absolute;
     top: 7%;
     left: 7%;
-    width: calc(100vw - 780px);
-    display: none;
+    /*width: calc(100vw - 780px);*/
+    width : 40vw;
+    display: block;
 }
 
 .about_name{
-    font-size:50px;
+    font-size:3vw;
     font-weight: bold;
+    border-bottom: 1px solid white;
 }
 
 .about_summaryA{
-    margin-left: 30px;
-    font-size:22px;
-    margin-top: 10px;
+    margin-left: 40px;
+    font-size:1.2vw;
+    margin-top: 15px;
     font-family: 'Poppins', sans-serif;
+    border-left: 1px dashed white;
+    padding: 10px;
 }
 
 .about_summaryB{
-    margin-left: 30px;
-    font-size:22px;
-    margin-top: 10px;
+    margin-left: 40px;
+    font-size:1.5vw;
+    margin-top: 20px;
     font-family: 'Poppins', sans-serif;
+    border: 1px dashed white;
+    padding: 10px;
+    text-align: center;
 }
 
-.about_extra{
-    margin-left: 30px;
+.about_shortcut{
+    border-right: 1px dashed white;
+    padding-right: 10px;
+    /*margin-left: 30px;*/
     font-family: 'Oxanium', sans-serif;
     font-size:15px;
+    text-align: right;
+}
+
+.about_extra_linkedin{
+    margin-top: 20px;
+}
+
+.about_extra_email{
+    margin-top: 10px;
+}
+
+.about_extra_stopstalk{
+    margin-top: 10px;
 }
 
 .status{
@@ -444,7 +467,7 @@ a{
 
 .pages_title{
     font-size:2.5vw;
-    margin:0px;
+    /*margin:0px;*/
     font-weight: bold;
 }
 
@@ -638,15 +661,22 @@ a{
         transform: translate(-50%, -50%);
         width: 60vw;
         height : 71vh;
-        overflow: scroll;
-        scroll-behavior: smooth;
-        scroll-snap-type: proximity;
-        border-bottom: 2px solid #e0e0e0;
     
         /*-webkit-animation: fadeIn 2s steps(40, end);
         animation: fadeIn 2s steps(40, end);*/
     }
     
+    .introduction_text{
+        overflow: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: proximity;
+        border-bottom: 1px solid #e0e0e0;
+        border-right: 1px solid #e0e0e0;
+        padding: 5px;
+        padding-bottom: 25px;
+        height : 65vh;
+    }
+
     .introduction_hi{
         font-size:3vw;
         font-family: 'Yantramanav', sans-serif;
@@ -671,11 +701,19 @@ a{
         margin-top:30px;
         font-family: 'Poppins', sans-serif;
     }
+
+    .introduction_shortcut{
+        border-left: 1px solid #e0e0e0;
+        padding-left:15px;
+        padding-top: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+    }
     
     .introduction_extra{
         margin-left: 0%;
         margin-right: 0%;
-        margin-top: 30px;
+        margin-top: 10px;
         font-family: 'Oxanium', sans-serif;
         font-size:2.5vw;
         text-transform: uppercase;
@@ -689,6 +727,70 @@ a{
         font-family: 'Yantramanav', sans-serif;
         text-transform: uppercase;
     
+    }
+
+    .about{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 60vw;
+        height : 71vh;
+    }
+    
+    .about_name{
+        font-size:6vw;
+        padding-bottom: 5px;
+    }
+
+    .about_text{
+        overflow: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: proximity;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 5px;
+        padding-bottom: 25px;
+        height : 60vh;
+    }
+    
+    .about_summaryA{
+        font-size:3.3vw;
+        margin-top: 0px;
+        margin-left: 0px;
+        font-family: 'Poppins', sans-serif;
+        border-left: 1px dashed white;
+        padding-left: 15px;
+    }
+    
+    .about_summaryB{
+        margin-left: 0px;
+        font-size:4.5vw;
+        margin-top: 20px;
+        font-family: 'Poppins', sans-serif;
+        border: 1px dashed white;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .about_shortcut{
+        border-right: 1px dashed white;
+        padding: 10px;
+        margin: 0;
+        font-family: 'Oxanium', sans-serif;
+        font-size:2.5vw;
+        text-align: right;
+    }
+
+    .about_extra_linkedin{
+        margin-top: 0px;
+    }
+
+    .about_extra_email{
+        margin-top: 5px;
+    }
+
+    .about_extra_stopstalk{
+        margin-top: 5px;
     }
 
     .social_link{
