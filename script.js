@@ -13,7 +13,15 @@ function zero_link() {
 
     document.getElementById("title").textContent = document.getElementById("introduction").textContent;
 
-    document.getElementById("div_portrait").style.display = "block";
+    if(window.innerWidth < 1095)
+    {
+        document.getElementById("div_portrait").style.display = "none";
+        document.getElementById("div_pages").style.display = "none";
+    }else
+    {
+        document.getElementById("div_portrait").style.display = "block";
+    }
+    
 
 }
 
@@ -29,7 +37,14 @@ function first_link() {
 
     document.getElementById("title").textContent = document.getElementById("about").textContent;
 
-    document.getElementById("div_portrait").style.display = "block";
+    if(window.innerWidth < 1095)
+    {
+        document.getElementById("div_portrait").style.display = "none";
+        document.getElementById("div_pages").style.display = "none";
+    }else
+    {
+        document.getElementById("div_portrait").style.display = "block";
+    }
 }
 
 function second_link() {
@@ -44,6 +59,11 @@ function second_link() {
     document.getElementById("div_reviews").style.display = "none";
 
     document.getElementById("title").textContent = document.getElementById("status").textContent;
+
+    if(window.innerWidth < 1095)
+    {
+        document.getElementById("div_pages").style.display = "none";
+    }
 
     document.getElementById("div_portrait").style.display = "none";
 }
@@ -60,6 +80,11 @@ function third_link() {
 
     document.getElementById("title").textContent = document.getElementById("skills").textContent;
 
+    if(window.innerWidth < 1095)
+    {
+        document.getElementById("div_pages").style.display = "none";
+    }
+
     document.getElementById("div_portrait").style.display = "none";
 }
 
@@ -74,6 +99,11 @@ function forth_link() {
     document.getElementById("div_reviews").style.display = "none";
 
     document.getElementById("title").textContent = document.getElementById("projects").textContent;
+
+    if(window.innerWidth < 1095)
+    {
+        document.getElementById("div_pages").style.display = "none";
+    }
 
     document.getElementById("div_portrait").style.display = "none";
 }
@@ -90,6 +120,11 @@ function fifth_link() {
 
     document.getElementById("title").textContent = document.getElementById("creations").textContent;
 
+    if(window.innerWidth < 1095)
+    {
+        document.getElementById("div_pages").style.display = "none";
+    }
+
     document.getElementById("div_portrait").style.display = "none";
 }
 
@@ -105,18 +140,40 @@ function sixth_link() {
 
     document.getElementById("title").textContent = document.getElementById("reviews").textContent;
 
+    if(window.innerWidth < 1095)
+    {
+        document.getElementById("div_pages").style.display = "none";
+    }
+
     document.getElementById("div_portrait").style.display = "none";
+}
+
+var n = 0;
+function slide_page(){
+    if(n == 0)
+    {
+        document.getElementById("div_pages").style.display = "block";
+        n = 1;
+    }else
+    {
+        document.getElementById("div_pages").style.display = "none";
+        n = 0;
+    }
+    
 }
 
 document.addEventListener("mousemove", parallax);
 	function parallax(event) {
-		this.querySelectorAll(".div").forEach((shift) => {
-		const position = shift.getAttribute("value");
-		const x = (window.innerWidth - event.pageX * position) / 90;
-		const y = (window.innerHeight - event.pageY * position) / 90;
+        if(window.innerWidth > 1095)
+        {
+            this.querySelectorAll(".div").forEach((shift) => {
+            const position = shift.getAttribute("value");
+            const x = (window.innerWidth - event.pageX * position) / 90;
+            const y = (window.innerHeight - event.pageY * position) / 90;
 
-		shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
-		});
+            shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            });
+        }
 	}
 
 
