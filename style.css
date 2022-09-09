@@ -55,7 +55,7 @@ a{
 
     /*-webkit-animation: fadeIn 2s steps(40, end);
     animation: fadeIn 2s steps(40, end);*/
-    display: none;
+    display: block;
 }
 
 .introduction_hi{
@@ -108,7 +108,7 @@ a{
     left: 7%;
     /*width: calc(100vw - 780px);*/
     width : 40vw;
-    display: block;
+    display: none;
 }
 
 .about_name{
