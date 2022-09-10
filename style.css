@@ -750,11 +750,11 @@ a{
         border-bottom: 1px solid #e0e0e0;
         padding: 5px;
         padding-bottom: 25px;
-        height : 60vh;
+        height : 55vh;
     }
     
     .about_summaryA{
-        font-size:3.3vw;
+        font-size:3vw;
         margin-top: 0px;
         margin-left: 0px;
         font-family: 'Poppins', sans-serif;
@@ -764,7 +764,7 @@ a{
     
     .about_summaryB{
         margin-left: 0px;
-        font-size:4.5vw;
+        font-size:5.2vw;
         margin-top: 20px;
         font-family: 'Poppins', sans-serif;
         border: 1px dashed white;
@@ -801,6 +801,11 @@ a{
         transform: translate(0, 50%);
         opacity: 0.6;
         transition: all .2s ease-in-out;
+        overflow: scroll;
+        width: 6vw;
+        height: 49vh;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
     }
     
     .social_link ul{
@@ -810,6 +815,7 @@ a{
     
     .social_link ul li{
         /*float: left;*/
+        margin-top:30px;
         margin-bottom:30px;
         text-align: center;
         transform: scale(1.5,1.5);
