@@ -55,7 +55,7 @@ a{
 
     /*-webkit-animation: fadeIn 2s steps(40, end);
     animation: fadeIn 2s steps(40, end);*/
-    display: block;
+    display: none;
 }
 
 .introduction_hi{
@@ -165,84 +165,138 @@ a{
     display: none;
 }
 
-.skills{
+.skills_title{
     position: absolute;
-    top: 7%;
+    top: 5%;
     left: 6%;
-    display: none;
-}
-
-.skills ul{
-    width: 250px;
-    list-style-type: none;
-    margin-left: 30px;
-}
-
-.skills li{
-    margin-bottom: 20px;
-}
-
-.skills ul li p{
-    font-family:  'Oxanium', sans-serif;
-}
-
-.skills img{
-    width:25px;
-    height: 25px;
-    margin:10px;
-}
-.skill_title{
-    position:fixed;
-    
-    transform: rotate(-90deg);
-    font-size: 10px;
-    opacity: 0.7;
-    top: 45%;
 }
 
 .skills ::-webkit-scrollbar {
     background: rgb(59, 59, 59);
     border-radius: 25px;
-    width: 8px;
+    width: 3px;
 }
 
-.software_title{ 
-    left: 35px;
+.skills_body{
+    position: absolute;
+    top: 12%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    height: 70%;
+    padding:20px;
 }
 
-.prolang_title{
-    left: 350px;
+.skills-align-start{
+    display:flex;
+    align-items:flex-start;
+}
+
+.skills-align-start img{
+    width:25px;
+    height: 25px;
+    margin:10px;
+}
+
+.software_title{
+    flex-grow: 1;
+    width: 1vw;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.software_title p{
+    font-size: 10px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.software_skills{
+    flex-grow: 3;
+    width: 8vw;
+    overflow-y: scroll;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.software_skills ul{
+    list-style-type: none;
+}
+
+.software_skills li{
+    margin-bottom: 10px;
+}
+
+.programming_title{
+    flex-grow: 1;
+    width: 1vw; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.programming_title p{
+    font-size: 10px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.programming_skills{
+    flex-grow: 3;
+    width: 8vw;
+    overflow-y: scroll;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.programming_skills ul{
+    list-style-type: none;
+}
+
+.programming_skills li{
+    margin-bottom: 10px;
 }
 
 .pertrait_title{
-    left: 740px;
+    flex-grow: 1;
+    width: 1vw; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.left_skills{
-    height: calc(110vh - 400px);
-    overflow-y: scroll;
-    margin-top: 30px;
-    float: left;
-    padding-right: 30px;
-}
-
-
-.right_skills{
-    height: calc(110vh - 400px);
-    overflow-y: scroll;
-    margin-top: 30px;
-    float: left;
-    margin-left:50px;
-    padding-right: 30px;
+.pertrait_title p{
+    font-size: 10px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    font-weight: bold;
+    margin-left: 30px;
 }
 
 .traits{
-    height: calc(110vh - 400px);
+    flex-grow: 3;
+    width: 8vw;
     overflow-y: scroll;
-    margin-top: 30px;
-    float: left;
-    margin-left:50px;
-    padding-right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.traits ul{
+    list-style-type: none;
+}
+
+.traits li{
+    margin-bottom: 20px;
 }
 
 .traits p{
@@ -250,15 +304,32 @@ a{
     margin-bottom: 10px;
 }
 
-.info{
-    height: calc(110vh - 400px);
-    margin-top: 30px;
-    float: left;
-    margin-left:50px;
-    padding-right: 30px;
-    width: 250px;
+.info_title{
+    flex-grow: 1;
+    width: 1vw; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.info_title p{
+    font-size: 10px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.info{
+    flex-grow: 3;
+    width: 8vw;
+    padding:20px;
+}
+
+.info p{
+    margin-top: 20px;
+}
 
 .progress{
     height: 8px;
@@ -431,12 +502,15 @@ a{
 
 .social_link ul li{
     /*float: left;*/
+    margin-top:25px;
     margin-bottom:25px;
     text-align: center;
-    transform: scale(1.1,1.1);
 }
 
-.social_link li:hover{
+.social_link ul li a{
+    transform: scale(1.1,1.1);
+}
+.social_link li a:hover{
     transform: scale(1.6,1.6);
 }
 
@@ -793,35 +867,145 @@ a{
         margin-top: 5px;
     }
 
+    .skills{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 60vw;
+        height : 71vh;
+    }
+
+    .skills_title{
+        font-size:6vw;
+    }
+    
+    .skills ul{
+        list-style-type: none;
+    }
+    
+    .skills li{
+        margin-bottom: 20px;
+    }
+    
+    .skills ul li p{
+        font-family:  'Oxanium', sans-serif;
+        text-transform:capitalize;
+    }
+    
+    .skills img{
+        width:25px;
+        height: 25px;
+        margin:10px;
+    }
+    .skill_title{
+        position:fixed;
+        
+        transform: rotate(-90deg);
+        font-size: 10px;
+        opacity: 0.7;
+        top: 45%;
+        display: none;
+    }
+    
+    .skills ::-webkit-scrollbar {
+        background: rgb(59, 59, 59);
+        border-radius: 25px;
+        width: 8px;
+    }
+
+    
+.software_title{ 
+    left: 35px;
+}
+
+.prolang_title{
+    left: 350px;
+}
+
+.pertrait_title{
+    left: 740px;
+}
+
+.left_skills{
+    height: calc(110vh - 400px);
+    overflow-y: scroll;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #6969dd;
+}
+
+
+.right_skills{
+    height: calc(110vh - 400px);
+    overflow-y: scroll;
+    margin-top: 30px;
+    float: left;
+    margin-left:50px;
+    padding-right: 30px;
+    display: none;
+}
+
+.traits{
+    height: calc(110vh - 400px);
+    overflow-y: scroll;
+    margin-top: 30px;
+    float: left;
+    margin-left:50px;
+    padding-right: 30px;
+    display: none;
+}
+
+.traits p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info{
+    height: calc(110vh - 400px);
+    margin-top: 30px;
+    float: left;
+    margin-left:50px;
+    padding-right: 30px;
+    width: 250px;
+    display: none;
+}
+
+
+.progress{
+    height: 5px;
+}
+
     .social_link{
         position: absolute;
-        right: 88%;
+        right:85%;
         bottom: 50%;
         /*left: -30%;*/
         transform: translate(0, 50%);
         opacity: 0.6;
         transition: all .2s ease-in-out;
-        overflow: scroll;
-        width: 6vw;
-        height: 49vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
         border-top: 1px solid white;
         border-bottom: 1px solid white;
+        width: 35px;
     }
     
     .social_link ul{
         list-style-type: none;
-        margin-top: 10px;
     }
     
     .social_link ul li{
         /*float: left;*/
         margin-top:30px;
         margin-bottom:30px;
-        text-align: center;
-        transform: scale(1.5,1.5);
     }
     
-    .social_link li:hover{
+    .social_link ul li a{
+        transform: scale(1.5,1.5);
+    }
+    .social_link li a:hover{
         transform: scale(1.9,1.9);
     }
     
