@@ -55,7 +55,7 @@ a{
 
     /*-webkit-animation: fadeIn 2s steps(40, end);
     animation: fadeIn 2s steps(40, end);*/
-    display: none;
+    display: block;
 }
 
 .introduction_hi{
@@ -162,6 +162,11 @@ a{
     top: 7%;
     left: 7%;
     width: calc(100vw - 780px);
+    display: none;
+}
+
+.skills
+{
     display: none;
 }
 
