@@ -412,11 +412,51 @@ a:hover{
     transition: background-color 1s;
 }
 
+.quote
+{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+
+    display: flex;
+    flex-direction: column;
+    width: 87%;
+}
+
+.quote h5{
+    font-weight: bold;
+}
+
+.theend{
+    display: flex;
+    overflow: hidden;
+    
+}
+
+.theend p{
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 8px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    animation: loop 3s linear infinite;
+}
+
+@keyframes loop {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-103%);}
+}
+
 #services{
     padding-top:30px;
     padding-bottom:30px;
     padding-left:80px;
     padding-right:80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #services h1{
     overflow: hidden;
@@ -432,20 +472,18 @@ a:hover{
 #service_items
 {
     /* height: 100%; */
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 50px;
     grid-row-gap: 20px;
-    justify-content: space-between;
-    align-items: center;
     list-style: none;
     padding-top: 20px;
     overflow-x: scroll;
     overflow-y: scroll;
     -ms-overflow-style: none;
-    scrollbar-width: none; 
-}
+    scrollbar-width: none; }
 
 .service_item
 {
@@ -585,19 +623,33 @@ a:hover{
     cursor: pointer;
 }
 
+.toolsandprojects{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+    text-wrap: nowrap;
+}
+
+.toolsandprojects a{
+    color: wheat;
+    font-family: "Poppins";
+    margin-right: 20px;
+}
+
 .tools
 {
-    margin-top: 10px;
     list-style: none;
+    width: 100%;
 } 
 
 .tools li{
     display: inline;
-    align-items: center;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
-.tools img{
+.tools li img{
     width: 20px
 }
 
@@ -663,9 +715,9 @@ a:hover{
     position: absolute;
     bottom: 80px;
     border: 0;
-    background-color: rgba(245, 222, 179, 0.185);
+    background-color: rgba(245, 222, 179, 0.76);
     backdrop-filter: blur(3px);
-    color: white;
+    color: rgb(49, 49, 49);
     font-size: 15px;
     padding: 10px;
     border-radius: 10px;
@@ -700,33 +752,35 @@ a:hover{
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 30px;
     list-style: none;
-    overflow: hidden;
-}
-
+    overflow-y: scroll;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; }
+    
 #Small_Projects
 {
-    width: 100%;
-    height: 100%;
-    padding-top: 40px;
     padding-left: 80px;
-    padding-right: 80px;
-    /* padding-bottom: 30px; */
+    /* padding-right: 80px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #Small_Projects h1
 {
     font-weight: bold;
+    padding-bottom: 10px;
 }
 
 .project_item
 {
     width:270px;
     height:270px;
-    margin-right: 50px;
     position: relative;
     overflow: hidden;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.482) 3px 3px 10px;
+    margin-right: 20px;
 }
 
 .project_item *
