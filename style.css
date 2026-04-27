@@ -142,6 +142,24 @@ section{
     animation: fadeIn 2s;
 }
 
+#introduction_professions .prof-badge {
+    background-color: wheat;
+    color: #353535;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+#introduction_professions .prof-detail {
+    opacity: 0.8;
+}
+
+#introduction_professions .prof-divider {
+    margin: 0 10px;
+    color: wheat;
+}
+
 .div_contact{
     margin-top: 20px;
     animation: fadeIn 2s;
@@ -247,22 +265,24 @@ section{
 }
 
 #CV{
-    font-family: 'Alata';
-    text-decoration: none;
-    color: #353535;
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Alata', sans-serif;
     background-color: wheat;
-    padding: 8px 24px;
-    border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #353535;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     margin-right: 70px;
-    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #CV:hover {
     background-color: white;
-    color: #353535;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    color: black;
 }
 
 button:hover{
@@ -735,7 +755,7 @@ a:hover{
 }
 
 .exp-arrow-left  { left: 4px; }
-.exp-arrow-right { right: 4px; }
+.exp-arrow-right { right: 100px; }
 
 
 #services{
@@ -1241,7 +1261,7 @@ a:hover{
         width: 90%;
         flex-direction: column;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 20px;
         z-index: 20;
     }
 
@@ -1262,10 +1282,10 @@ a:hover{
 
     #CV {
         margin-right: 0;
-        margin-bottom: 0;
-        border-left: none;
-        padding: 6px 18px;
-        font-size: 12px;
+        margin-top: 5px;
+        padding: 10px 25px;
+        font-size: 14px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
 
     /* ── About ────────────────────────────────────────────────── */
@@ -1337,6 +1357,9 @@ a:hover{
         height: 34px;
         font-size: 14px;
     }
+
+    .exp-arrow-left  { left: 4px; }
+.exp-arrow-right { right: 4px; }
 
     /* ── Services ─────────────────────────────────────────────── */
     #services {
