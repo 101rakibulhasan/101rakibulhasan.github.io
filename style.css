@@ -174,6 +174,7 @@ section{
     top: 50%;
     right: 35px;
     transform: translate(50%, -50%); /* Center the ul */
+    transform: translateY(-50%); /* Center the ul vertically */
     display: flex;
     flex-direction: column; /* Arrange li items in a column */
     justify-content: center; /* Center items vertically */
@@ -184,6 +185,7 @@ section{
     border-radius: 30px;
     padding: 17px;
     transition: background-color 500ms;
+    z-index: 10;
 }
 
 #social_link:hover {
@@ -209,6 +211,7 @@ section{
     bottom: 20px;
     left: 50%;
     transform: translate(-50%, 50%);
+    transform: translateX(-50%);
     overflow-x: hidden;
     white-space: nowrap;
     /* background-color: red; */
@@ -216,10 +219,12 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 20;
 }
 
 #pages ul{
     margin-left: 70px;
+    margin-bottom: 0;
     list-style: none;
     display: flex;
     align-items: center;
@@ -244,11 +249,20 @@ section{
 #CV{
     font-family: 'Alata';
     text-decoration: none;
-    color: wheat;
-    border-left: 2px solid white;
-    padding-left: 20px;
+    color: #353535;
+    background-color: wheat;
+    padding: 8px 24px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin-right: 70px;
-    margin-bottom: 17px;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+#CV:hover {
+    background-color: white;
+    color: #353535;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 button:hover{
@@ -1203,10 +1217,11 @@ a:hover{
     /* ── Social links ─────────────────────────────────────────── */
     #social_link {
         top: auto;
-        bottom: 50px;
+        bottom: 110px;
         right: 50%;
         transform: translateX(50%);
         flex-direction: row;
+        z-index: 30;
         border-radius: 30px;
         padding: 10px 16px;
     }
@@ -1223,8 +1238,11 @@ a:hover{
     /* ── Page nav ─────────────────────────────────────────────── */
     #pages {
         bottom: 10px;
+        width: 90%;
         flex-direction: column;
-        gap: 4px;
+        flex-wrap: wrap;
+        gap: 15px;
+        z-index: 20;
     }
 
     #pages ul {
@@ -1246,7 +1264,7 @@ a:hover{
         margin-right: 0;
         margin-bottom: 0;
         border-left: none;
-        padding-left: 0;
+        padding: 6px 18px;
         font-size: 12px;
     }
 
