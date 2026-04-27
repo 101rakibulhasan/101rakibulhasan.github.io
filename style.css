@@ -38,6 +38,7 @@ body{
     background-color: #353535;
     color:white;   
     overflow: hidden;
+    isolation: isolate;
 
     scrollbar-width: thin;
     scrollbar-color: #6969dd #e0e0e0;
@@ -67,19 +68,22 @@ section{
     background-color: #353535;
     width: 100vw;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
 }
 
 
 #background_video {
-    width: 100vw;
-    height: 100vh;
+    position: absolute;   /* instead of fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: -1;
- }
+}
 
 .main{
     position: absolute;
@@ -1166,6 +1170,7 @@ a:hover{
         left: 0;
         transform: none;
         position: relative;
+        z-index: 0;
     }
 
     /* ── Introduction ─────────────────────────────────────────── */
