@@ -23,7 +23,7 @@
 
     <div id="bg_default" class="background_default" value="-5">
         <div class="main">
-            <video autoplay muted loop id="background_video">
+            <video autoplay muted loop playsinline id="background_video">
                 <source src="images/background.webm" type="video/webm">
             </video>
             <div id="main_body">
@@ -93,6 +93,80 @@
                     </div> 
                        
                 </section>
+                <section id="experience">
+                    <h1>Experience</h1>
+
+                    <div class="exp-viewport">
+
+                        <!-- left arrow -->
+                        <button class="exp-arrow exp-arrow-left" id="expArrowLeft" aria-label="Previous">&#8592;</button>
+
+                        <!-- scrollable track -->
+                        <div class="exp-scroll" id="expScroll">
+
+                            <!-- ── path line drawn by JS ── -->
+                            <svg class="exp-path-svg" id="expPathSvg" aria-hidden="true"></svg>
+
+                            <!-- milestone 1 -->
+                            <div class="exp-milestone" data-index="0">
+                                <div class="exp-dot-wrap">
+                                    <div class="exp-dot" id="expDot0"></div>
+                                </div>
+                                <div class="exp-content exp-content-top">
+                                    <div class="exp-logo">UP</div>
+                                    <p class="exp-date">Sep 2024 – Mar 2025</p>
+                                    <h3 class="exp-title">3D Mod Artist &amp; Developer</h3>
+                                    <p class="exp-company">Upwork · Freelance · Remote</p>
+                                    <p class="exp-desc">Making mods for Bannerlord — editing code, designing 3D assets, and retargeting character animations for client projects.</p>
+                                    <div class="exp-tags">
+                                        <span class="exp-tag">Blender</span>
+                                        <span class="exp-tag">C++</span>
+                                        <span class="exp-tag">3D Animation</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- milestone 2 -->
+                            <div class="exp-milestone" data-index="1">
+                                <div class="exp-dot-wrap">
+                                    <div class="exp-dot" id="expDot1"></div>
+                                </div>
+                                <div class="exp-content exp-content-bottom">
+                                    <div class="exp-logo">IC</div>
+                                    <p class="exp-date">May 2025 – Present</p>
+                                    <h3 class="exp-title">ICEL TECH</h3>
+                                    <p class="exp-company">Remote · 1 yr</p>
+
+                                    <div class="exp-role-block exp-role-block-top">
+                                        <p class="exp-role-name">Frontend Developer <span class="exp-badge">Full-time</span></p>
+                                        <p class="exp-role-date">Aug 2025 – Present · 9 mos</p>
+                                        <p class="exp-desc">Joined full-time after internship. Building clean apps and connecting UI to backend.</p>
+                                        <div class="exp-tags">
+                                            <span class="exp-tag">Flutter</span>
+                                            <span class="exp-tag">Front-End</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="exp-role-block">
+                                        <p class="exp-role-name">Software Developer <span class="exp-badge">Internship</span></p>
+                                        <p class="exp-role-date">May 2025 – Aug 2025 · 4 mos</p>
+                                        <p class="exp-desc">Developed production Flutter apps using clean architecture under mentorship.</p>
+                                        <div class="exp-tags">
+                                            <span class="exp-tag">Flutter</span>
+                                            <span class="exp-tag">Problem Solving</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- right arrow -->
+                        <button class="exp-arrow exp-arrow-right" id="expArrowRight" aria-label="Next">&#8594;</button>
+
+                    </div>
+                </section>
+
                 <section id="services">
                     <h1>My Services</h1>
                     <ul id="service_items">
@@ -406,6 +480,7 @@
                 <ul>
                     <li><a id="introduction-link" href="#">Introduction</a></li>
                     <li><a id="about-link" href="#">About</a></li>
+                    <li><a id="experience-link" href="#">Experience</a></li>
                     <li><a id="services-link" href="#">Services</a></li>
                     <li><a id="Big_Projects-link" href="#">Projects</a></li>
                 </ul>

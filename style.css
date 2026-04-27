@@ -449,6 +449,277 @@ a:hover{
     100% {transform: translateX(-103%);}
 }
 
+
+#experience {
+    padding: 30px 0 30px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: visible;          /* was: hidden — this was clipping the cards */
+}
+
+#experience h1 {
+    font-size: 40px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 0;
+}
+
+#experience h1.animate {
+    animation: typewriterH1 4s steps(44) 1ms 1 normal both;
+}
+
+.exp-viewport {
+    position: relative;         /* was missing — arrows need this to anchor */
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    overflow: visible;
+}
+
+.exp-scroll {
+    flex: 1;
+    overflow-x: scroll;
+    overflow-y: visible;
+    display: flex;
+    align-items: center;
+    padding: 140px 0;           /* no horizontal padding — milestone handles its own */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;   /* snap to each milestone */
+}
+
+.exp-scroll::-webkit-scrollbar { display: none; }
+
+.exp-path-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: visible;
+}
+
+.exp-milestone {
+    flex: 0 0 100%;             /* always full width of the scroll container */
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 120px;           /* breathing room on wide screens */
+    box-sizing: border-box;
+    scroll-snap-align: center;
+}
+
+.exp-dot-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    order: 2;
+}
+
+.exp-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid rgba(245, 222, 179, 0.35);
+    background-color: #353535;
+    transition: border-color 0.4s, background-color 0.4s, transform 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.exp-dot.active {
+    border-color: wheat;
+    background-color: wheat;
+    transform: scale(1.4);
+    box-shadow: 0 0 0 4px rgba(245, 222, 179, 0.15);
+}
+
+.exp-content {
+    width: 100%;
+    max-width: 520px;
+    max-height: 340px;          /* scroll if content exceeds this */
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(245,222,179,0.3) transparent;
+    background-color: #00000042;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(245, 222, 179, 0.15);
+    border-radius: 20px;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.exp-content::-webkit-scrollbar {
+    display: block;
+    width: 4px;
+}
+ 
+.exp-content::-webkit-scrollbar-thumb {
+    background-color: rgba(245,222,179,0.3);
+    border-radius: 20px;
+}
+
+.exp-content-top {
+    order: 1;
+    margin-bottom: 20px;
+    transform: translateY(-20px);
+}
+
+.exp-content-bottom {
+    order: 3;
+    margin-top: 20px;
+    transform: translateY(20px);
+}
+
+.exp-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.exp-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid rgba(245, 222, 179, 0.3);
+    background-color: #4f4f4f59;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: bold;
+    color: wheat;
+    margin-bottom: 10px;
+}
+
+.exp-date {
+    font-family: 'Poppins';
+    font-size: 13px;            /* was 11px */
+    color: rgba(245, 222, 179, 0.5);
+    margin: 0 0 4px;
+}
+
+.exp-title {
+    font-family: 'Alata';
+    font-size: 20px;            /* was 16px */
+    font-weight: bold;
+    color: white;
+    margin: 0 0 3px;
+}
+
+.exp-company {
+    font-family: 'Poppins';
+    font-size: 14px;            /* was 12px */
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0 0 10px;
+}
+
+.exp-role-block {
+    border-left: 2px solid rgba(245, 222, 179, 0.2);
+    padding-left: 10px;
+    margin-bottom: 14px;
+}
+
+.exp-role-block-top {
+    border-left-color: rgba(245, 222, 179, 0.5);
+}
+
+.exp-role-name {
+    font-family: 'Poppins';
+    font-size: 15px;            /* was 13px */
+    font-weight: bold;
+    color: white;
+    margin: 0 0 2px;
+}
+
+.exp-role-date {
+    font-family: 'Poppins';
+    font-size: 13px;            /* was 11px */
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 0 6px;
+}
+
+.exp-desc {
+    font-size: 14px;            /* was 12px */
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    margin: 0 0 8px;
+}
+
+.exp-badge {
+    font-family: 'Poppins';
+    font-size: 12px;            /* was 10px */
+    padding: 2px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(245, 222, 179, 0.3);
+    color: rgba(245, 222, 179, 0.6);
+    background: transparent;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.exp-tag {
+    font-family: 'Poppins';
+    font-size: 12px;            /* was 10px */
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(245, 222, 179, 0.18);
+    color: rgba(245, 222, 179, 0.5);
+}
+
+.exp-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(53, 53, 53, 0.85);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(245, 222, 179, 0.35);
+    color: wheat;
+    font-size: 18px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, border-color 0.3s, opacity 0.3s;
+    animation: hobble 2.5s ease-in-out infinite;
+}
+
+.exp-arrow:hover {
+    background: rgba(245, 222, 179, 0.2);
+    border-color: wheat;
+}
+
+.exp-arrow.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.exp-arrow-left  { left: 4px; }
+.exp-arrow-right { right: 4px; }
+
+
 #services{
     padding-top:30px;
     padding-bottom:30px;
@@ -875,3 +1146,344 @@ a:hover{
 
 /* MOBILE and TABLET 1024px */
 /*@media screen and (max-width: 960px) , screen and (max-height: 555px), (min-width: 768px) and (max-width: 1024px) {*/
+
+/* ══════════════════════════════════════════════════════════════
+   Replace the existing @media screen and (max-width: 768px) block
+   in style.css with this complete version
+   ══════════════════════════════════════════════════════════════ */
+
+@media screen and (max-width: 768px) {
+
+    /* ── Root container ───────────────────────────────────────── */
+    .main {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        top: 0;
+        left: 0;
+        transform: none;
+        position: relative;
+    }
+
+    /* ── Introduction ─────────────────────────────────────────── */
+    #introduction_np {
+        top: 12%;
+        left: 5%;
+        right: 5%;
+    }
+
+    #introduction_name {
+        font-size: clamp(32px, 8vw, 56px);
+    }
+
+    #introduction_professions {
+        font-size: clamp(12px, 3.5vw, 18px);
+    }
+
+    .div_contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .contact {
+        padding: 7px 18px;
+        font-size: 13px;
+        margin-right: 0;
+    }
+
+    /* ── Social links ─────────────────────────────────────────── */
+    #social_link {
+        top: auto;
+        bottom: 50px;
+        right: 50%;
+        transform: translateX(50%);
+        flex-direction: row;
+        border-radius: 30px;
+        padding: 10px 16px;
+    }
+
+    #social_link li {
+        margin-bottom: 0;
+        margin-right: 16px;
+    }
+
+    #social_link li:last-child {
+        margin-right: 0;
+    }
+
+    /* ── Page nav ─────────────────────────────────────────────── */
+    #pages {
+        bottom: 10px;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    #pages ul {
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    #pages li {
+        margin-right: 12px;
+    }
+
+    #pages li a {
+        font-size: 12px;
+    }
+
+    #CV {
+        margin-right: 0;
+        margin-bottom: 0;
+        border-left: none;
+        padding-left: 0;
+        font-size: 12px;
+    }
+
+    /* ── About ────────────────────────────────────────────────── */
+    #about {
+        overflow-y: auto;
+    }
+
+    .about_texts {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 90%;
+        margin: 20px auto 0;
+        padding: 10px;
+    }
+
+    .about_texts p {
+        font-size: 16px;
+    }
+
+    .about_status {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        width: 90%;
+        margin: 16px auto 0;
+    }
+
+    .quote {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        width: 90%;
+        margin: 16px auto 16px;
+    }
+
+    .theend p {
+        font-size: 20px;
+    }
+
+    /* ── Experience ───────────────────────────────────────────── */
+    #experience {
+        padding: 20px 0;
+    }
+
+    #experience h1 {
+        font-size: 28px;
+        padding-left: 20px;
+    }
+
+    .exp-milestone {
+        padding: 0 20px;
+    }
+
+    .exp-content {
+        max-width: 100%;
+        max-height: 260px;
+    }
+
+    .exp-scroll {
+        padding: 120px 0;
+    }
+
+    .exp-arrow {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    /* ── Services ─────────────────────────────────────────────── */
+    #services {
+        padding: 20px 16px;
+        align-items: flex-start;        /* left-align everything */
+        justify-content: flex-start;
+    }
+
+    #services h1 {
+        font-size: 28px;
+        text-align: left;
+    }
+
+    #service_items {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 12px;
+        width: 100%;
+        padding-top: 12px;
+    }
+
+    .service_item {
+        height: auto;
+        min-height: 90px;
+        padding: 10px;
+        border-radius: 16px;
+        justify-content: flex-start;    /* left-align content inside card */
+        align-items: center;
+    }
+
+    #service_image {
+        height: 70px;
+        width: 70px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .service_item_desc {
+        margin-left: 14px;
+    }
+
+    .service_item_desc p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .service_title {
+        font-size: 14px;
+    }
+
+    /* ── Big Projects — 2×N grid instead of horizontal scroll ─── */
+    #Big_Projects {
+        padding: 20px 16px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .project_box {
+        width: 100%;
+        border-radius: 20px;
+        margin-bottom: 30px;
+        padding: 16px;
+    }
+
+    .project_box h1 {
+        font-size: 24px;
+        width: auto;            /* remove the fixed typewriter width on mobile */
+        border-right: none;
+        white-space: normal;
+        overflow: visible;
+    }
+
+    /* kill horizontal scroll — become a 2-column grid */
+    #big_project_items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        overflow-x: visible;
+        overflow-y: visible;
+        padding: 10px 0 0;
+    }
+
+    #big_project_items li {
+        width: 100%;
+    }
+
+    #big_project_items .project_item {
+        width: 100%;
+        height: 140px;
+        margin-right: 0;
+        border-radius: 16px;
+    }
+
+    /* always show title + description on mobile (no hover) */
+    #big_project_items .project_item_text {
+        background-color: rgba(10, 10, 10, 0.65);
+    }
+
+    #big_project_items .project_item_text p {
+        max-height: 40px;
+        font-size: 11px;
+        overflow: hidden;
+    }
+
+    #big_project_items .project_item_text h3 {
+        font-size: 13px;
+    }
+
+    .toolsandprojects {
+        margin-top: 4px;
+    }
+
+    .tools li img {
+        width: 14px;
+    }
+
+    /* hide the "More Projects" bounce button — grid shows all */
+    #more_projects {
+        display: none;
+    }
+
+    /* ── Small Projects ───────────────────────────────────────── */
+    #Small_Projects {
+        padding: 20px 16px;
+    }
+
+    #Small_Projects h1 {
+        font-size: 28px;
+    }
+
+    #small_project_items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    #Small_Projects .project_item {
+        width: 100%;
+        height: 150px;
+        margin-right: 0;
+    }
+}
+
+/* ── Very small phones ≤ 400px ────────────────────────────────── */
+@media screen and (max-width: 400px) {
+
+    #introduction_name {
+        font-size: 28px;
+    }
+
+    #big_project_items {
+        grid-template-columns: 1fr;
+    }
+
+    #big_project_items .project_item {
+        height: 160px;
+    }
+
+    #small_project_items {
+        grid-template-columns: 1fr;
+    }
+
+    #Small_Projects .project_item {
+        height: 180px;
+    }
+
+    .about_texts p {
+        font-size: 14px;
+    }
+
+    .exp-content {
+        max-height: 220px;
+    }
+}
